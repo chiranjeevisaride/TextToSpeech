@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nfn-Yj-8Xm">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Insta Speech-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Insta Speech" id="BYZ-38-t0r" customClass="ViewController" customModule="TextToSpeech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="se4-rk-Qxy">
+                                <rect key="frame" x="20" y="110" width="335" height="605"/>
+                                <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">                                                                                                   Suppose you are traveling in a bus, in which 10 riders are traveling. On the first stand, two riders landed and four riders climbed. On the second stand, five riders landed and two riders climbed. On the next stand, two riders landed and 3 riders climbed. Now tell how many riders are traveling in the bus ?
+            🤔🤔🤔🤔🤔🤔🤔               </mutableString>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-je-iZv">
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem title="Item" image="pause" width="87.666666666666671" id="DnF-Af-OyD" userLabel="pause">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="lk9-EA-B8c"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RAj-q5-158"/>
+                                    <barButtonItem title="Item" image="stop" id="fz2-tu-Unk" userLabel="stop">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="0t2-k0-ZAB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NWX-rB-p76"/>
+                                    <barButtonItem title="start" image="start" id="yw4-Rl-rpl">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="W44-WY-ocW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TOU-je-iZv" firstAttribute="centerX" secondItem="se4-rk-Qxy" secondAttribute="centerX" id="08N-4j-oLP"/>
+                            <constraint firstItem="se4-rk-Qxy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="83k-pd-qLA"/>
+                            <constraint firstItem="se4-rk-Qxy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="Bdb-Sv-cIc"/>
+                            <constraint firstItem="se4-rk-Qxy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-63" id="CSA-c1-BsW"/>
+                            <constraint firstItem="TOU-je-iZv" firstAttribute="top" secondItem="se4-rk-Qxy" secondAttribute="bottom" constant="19" id="EFa-wS-3wW"/>
+                            <constraint firstItem="TOU-je-iZv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zhg-jT-1do"/>
+                            <constraint firstItem="TOU-je-iZv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fzx-p4-TgH"/>
+                            <constraint firstAttribute="trailing" secondItem="se4-rk-Qxy" secondAttribute="trailing" constant="20" id="kpD-Nm-Qbk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rlh-4E-RjK"/>
+                    <connections>
+                        <outlet property="textView" destination="se4-rk-Qxy" id="T6j-pg-G4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="131.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dnI-Jz-1uH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nfn-Yj-8Xm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1rB-Iv-KAk">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jbs-NE-kho"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pht-57-S0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="100" height="100"/>
+        <image name="start" width="100" height="100"/>
+        <image name="stop" width="100" height="100"/>
+    </resources>
+</document>
